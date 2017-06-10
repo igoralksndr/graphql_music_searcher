@@ -92,7 +92,4 @@ ENV/
 .ropeproject
 
 #Ignore Migrations
-*/migrations/0*
-
-#Ignore sqlite file
-db.sqlite3
+graphql_music_searcher/apps/*/migrations/0*
