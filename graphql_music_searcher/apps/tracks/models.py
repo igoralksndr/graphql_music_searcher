@@ -8,7 +8,7 @@ class Track(models.Model):
     """
     album = models.ForeignKey(Album, db_index=True)
     name = models.CharField(max_length=128)
-    preview_url = models.CharField(max_length=255)
+    preview_url = models.CharField(max_length=2083)
     track_number = models.PositiveIntegerField()    
 
     def __str__(self):

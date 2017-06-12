@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     'artists',
     'albums',
     'tracks',
+    # utils
+    'seeders',
 ]
 
 MIDDLEWARE = [
