@@ -26,4 +26,4 @@ Once you have everything done, just run:
 docker-compose up
 ```
 
-Open your browser and visit [localhost:8000](http://localhost:8000/) et voilá!
+Open your browser and visit [localhost:8000/graphql](http://localhost:8000/graphql) et voilá!
