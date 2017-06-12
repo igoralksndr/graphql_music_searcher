@@ -53,14 +53,33 @@ def insertModels():
     
     at3 = Artist(name= 'Natiruts', image_url=urllib.parse.quote('i.scdn.co/image/9b3411def3d9d7e9ddfb34b9b102997ec0a9b863'))
     at3.save()
+    at4 = Artist(name= 'Luiz Melodia', image_url=urllib.parse.quote('rollingstone.uol.com.br/media/images/medium/2012/05/04/img-1005476-luiz-melodia.jpg'))
+    at4.save()
+    at5 = Artist(name= 'Sonia Savinell', image_url=urllib.parse.quote('i.vimeocdn.com/portrait/5278758_300x300'))
+    at5.save()
     
     abm31 = at3.album_set.create(name='Povo Brasileiro', image_url=urllib.parse.quote('e.snmc.io/lk/f/l/fcd44e7b52a73f3a0326ce6ce74a8f55/1859850.jpg'))
     abm31.track_set.create(name='Eu e Ela', preview_url='', track_number=4)
     abm31.track_set.create(name='A Cor', preview_url='', track_number=6)
     
-    abm32 = at3.album_set.create(name='Natiruts Acustico no Rio de Janeiro', image_url=urllib.parse.quote('http://statics.livrariacultura.net.br/products/capas_lg/615/30215615.jpg'))
+    abm32 = at3.album_set.create(name='Natiruts Acustico no Rio de Janeiro', image_url=urllib.parse.quote('statics.livrariacultura.net.br/products/capas_lg/615/30215615.jpg'))
     abm32.track_set.create(name='Dentro da Música II', preview_url='', track_number=1)
     abm32.track_set.create(name='Quero Ser Feliz Tambem', preview_url='', track_number=6)
     abm32.track_set.create(name='Pedras Escondidas', preview_url='', track_number=11)
+    trck8 = abm32.track_set.create(name='Perola Negra', preview_url='', track_number=8)
+    trck8.artists.add(at4)
+    trck17 = abm32.track_set.create(name='Sorri, Sou Rei', preview_url='', track_number=17)
+    trck17.artists.add(at5)
+
+    at6 = Artist(name= 'Led Zeppelin', image_url=urllib.parse.quote('consequenceofsound.files.wordpress.com/2010/12/led_zeppelin_1225212304_crop_300x300.jpg?quality=80&w=300'))
+    at6.save()
+
+    abm61 = at6.album_set.create(name='Led Zeppelin II ', image_url=urllib.parse.quote('upload.wikimedia.org/wikipedia/en/2/20/Led_Zeppelin_-_Led_Zeppelin_II.jpg'))
+    abm61.track_set.create(name='Whole Lotta Love', preview_url='', track_number=1)
+    abm61.track_set.create(name='Ramble On', preview_url='', track_number=7)
+
+    abm62 = at6.album_set.create(name='Led Zeppelin IV ', image_url=urllib.parse.quote('upload.wikimedia.org/wikipedia/en/2/26/Led_Zeppelin_-_Led_Zeppelin_IV.jpg'))
+    abm62.track_set.create(name='Black Dog', preview_url='', track_number=1)
+    abm62.track_set.create(name='Stairway To Heaven', preview_url='', track_number=4)
 
     print('    Artists, Albums and Tracks have been inserted')
